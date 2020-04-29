@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:ub="http://uniboard.mnemis.com/widgets" 
+        id="squelette.swf" 
+        version="1.0"
+        width="566"
+        height="790" 
+        ub:resizable="true" >   
+  <name>squelette</name>
+  <content src="index.htm"/> 
+  <access network="true"/>
+</widget>

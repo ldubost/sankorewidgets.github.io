@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widget/Quadrillages" 
+        version="0.1"
+        width="800"
+        height="600"
+        ub:resizable="true">
+      
+  		<name>Socrative Prof</name>
+		<author href="http://micetf.fr/rsq/"
+	            email="francois.bocquet@diena.org">Francois Bocquet</author>
+		<description>Quadrillage et activités pour les enfants du prescolaire (maternelle)</description>
+
+        <content src="http://micetf.fr/rsq/"/>
+</widget>

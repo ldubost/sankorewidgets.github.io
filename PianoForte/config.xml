@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://http://www.w3.org/ns/widgets"
+   id="Piano HTML5"
+   version="1.0"
+   height="500"
+   width="950"
+   >
+  <name>Piano</name>
+  <description>Piano HTML5</description>
+  <content src="index.html"/>
+  <author>Francois Bocquet d'après http://mrcoles.com/piano/ avec l'aide d'Adrien Bocquet</author>
+</widget>

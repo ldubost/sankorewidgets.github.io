@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/Scratch" 
+        version="0.1"
+        width="970"
+        height="700"
+        ub:resizable="true">
+      
+  		<name>Calculatrice Scientifique</name>
+		<author href="http://scratch.mit.edu/projects/editor/" email="francois.bocquet@diena.org">Francois Bocquet</author>
+		<description>Application Scratch en ligne (pas de persistance des données)</description>
+
+        <content src="http://scratch.mit.edu/projects/editor/"/>
+</widget>
