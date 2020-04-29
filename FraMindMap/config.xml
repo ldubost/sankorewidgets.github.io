@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/mindmap" 
+        version="0.1"
+        width="800"
+        height="600"
+        ub:resizable="true">
+      
+  		<name>Cartes mentales</name>
+		<author href="http://framindmap.org"
+	            email="francois.bocquet@diena.org">Francois Bocquet</author>
+		<description>MindMap</description>
+
+        <content src="http://framindmap.org/framindmap.html"/>
+</widget>
