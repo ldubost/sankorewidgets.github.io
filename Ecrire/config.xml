@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub=""
+        id="" 
+        version="1.0"
+        width="900"
+        height="450" 
+        ub:resizable="true">     
+   
+		<name>Notes</name>
+		<author href=""
+	            email="christine.menanteau@laposte.net">Menanteau</author>
+		<description>Ecrire et comparer</description>
+		
+		<content src="index.html"/>
+</widget>

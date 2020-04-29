@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:ub="http://uniboard.mnemis.com/widgets/CasenPoche" 
+        id="iep" 
+        version="1.0"
+        width="820"
+        height="620" 
+        ub:resizable="true" >   
+  <name>Echiquier Mural</name>
+  <author> Matoux Matheux mis en forme par Francois Bocquet 
+  source : http://matoumatheux.ac-rennes.fr/echecs/initiation/mural.swf</author>
+  <content src="index.htm"/> 
+</widget>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/easychalk" 
+        version="0.1"
+        width="800"
+        height="600"
+        ub:resizable="true">
+      
+  		<name>FlashEarth</name>
+		<author href="http://www.easychalk.net/"
+	            email="info@mnemis.com">Mnemis SA</author>
+		<description>EasyChalk</description>
+
+        <content src="http://www.easychalk.net/"/>
+</widget>
