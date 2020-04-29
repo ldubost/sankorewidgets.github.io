@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+
+<!--
+	Vous pouvez modifier ce fichier pour y intégrer vos propres exercices.
+	
+	p = Personne -> 1PS = 1ère Personne Singulier
+	g = Genre -> M = Masculin / F = Féminin
+	a = Auxiliaire -> AVOIR / ETRE
+	
+	Plus d'infos: http://www.informatique-enseignant.com/conjuguer-verbe/
+-->
+
+<exercices>
+
+	<exo titre="Mon cousin">
+		<phrase p="1PS" g="M" a="ETRE">Souvent, je (aller) chez mon cousin.</phrase>
+		<phrase p="2PS" g="M" a="ETRE">Tu (passer) régulièrement devant chez lui.</phrase>
+		<phrase p="3PS" g="M" a="AVOIR">Il (habiter) à quelques pas d'ici.</phrase>
+		<phrase p="1PP" g="M" a="AVOIR">Avec lui, nous (jouer) souvent aux échecs.</phrase>
+		<phrase p="2PP" g="M" a="AVOIR">Vous (devoir) vous connaître.</phrase>
+		<phrase p="3PP" g="M" a="AVOIR">Ses parents (être) tes voisins.</phrase>
+	</exo>
+
+	<exo titre="Le verbe faire">
+		<phrase p="1PS" g="M" a="AVOIR">Chaque semaine, je (faire) du vélo.</phrase>
+		<phrase p="2PS" g="M" a="AVOIR">Tu (faire) attention.</phrase>
+		<phrase p="3PS" g="F" a="AVOIR">Ma soeur (faire) ses devoirs.</phrase>
+		<phrase p="1PP" g="M" a="AVOIR">Nous (faire) un grand dessin.</phrase>
+		<phrase p="2PP" g="M" a="AVOIR">Vous (faire) comme bon vous semble.</phrase>
+		<phrase p="3PP" g="M" a="AVOIR">Ces voitures (faire) trop de bruit.</phrase>
+	</exo>
+	
+	<exo titre="Le futur">
+		<phrase p="3PP" g="M" a="ETRE">La semaine prochaine, nous (aller) à la mer.</phrase>
+		<phrase p="3PS" g="F" a="AVOIR">Demain, Julie (préparer) les bagages.</phrase>
+		<phrase p="1PS" g="M" a="AVOIR">Bientôt, je (rassembler) mes affaires.</phrase>
+	</exo>
+	
+	<exo titre="Le subjonctif">
+		<phrase p="1PS" g="M" a="ETRE">Il veut que je (venir) le plus tôt possible.</phrase>
+		<phrase p="1PP" g="F" a="ETRE">Il faut que nous (partir) de bonne heure.</phrase>
+	</exo>
+
+</exercices>

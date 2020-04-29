@@ -1,0 +1,308 @@
+﻿<!--
+	Ce fichier a été réalisé par Maxime Duquesnoy le 14/11/2013.
+	Il est disponible sous licence Creative Commons CC-By-SA
+	
+	Vous pouvez le modifier pour y intégrer vos propres exercices.
+	Utilisez l'espace pour séparer les mots et le signe "+" pour les rassembler.
+	Plus d'infos: http://www.informatique-enseignant.com/reconstituer-phrase/
+-->
+
+<exercices>
+
+	<exo titre="La rentrée scolaire">
+		<phrase>Julien part à l’école.</phrase>
+		<phrase>Il découvre sa classe.</phrase>
+		<phrase>Julien a un+nouveau cartable.</phrase>
+		<phrase>Il a un joli plumier.</phrase>
+		<phrase>Sur+sa+mallette, Julien a+collé une+photo.</phrase>
+		<phrase>Il a perdu son crayon rouge.</phrase>
+		<phrase>Il ne peut pas colorier son dessin.</phrase>
+	</exo>
+	
+	<exo titre="L'écureuil">
+		<phrase>Un écureuil court dans la forêt.</phrase>
+		<phrase>Il s’arrête près d’un arbre.</phrase>
+		<phrase>Une feuille de l’arbre tombe au sol.</phrase>
+		<phrase>La feuille a une belle couleur.</phrase>
+		<phrase>Un marron tombe sur la tête de l'écureuil.</phrase>
+		<phrase>Il se sauve dans la forêt.</phrase>
+	</exo>	
+	
+	<exo titre="L'automne">	
+		<phrase>Ferme ton manteau.</phrase>
+		<phrase>Enroule une écharpe autour de ton cou.</phrase>
+		<phrase>Mets un bonnet sur ta tête.</phrase>
+		<phrase>Protège-toi de la pluie.</phrase>
+		<phrase>Natacha se promène dans la forêt. </phrase>
+		<phrase>C’est la tempête. </phrase>
+		<phrase>Elle a mis ses bottes et+son+manteau.</phrase>
+		<phrase>Natacha ne porte pas de bonnet sur la tête. </phrase>
+	</exo>
+	
+	<exo titre="Halloween">
+		<phrase>Ce soir, c’est Halloween.</phrase>
+		<phrase>La sorcière prend son livre de magie.</phrase>
+		<phrase>Elle cherche une formule magique.</phrase>
+		<phrase>Elle veut faire apparaître une citrouille.</phrase>
+		<phrase>Elle découpe des yeux dans la citrouille.</phrase>
+		<phrase>Elle enlève la peau et+les+pépins.</phrase>
+		<phrase>La sorcière découpe la citrouille en morceaux.</phrase>
+		<phrase>Elle met du beurre dans une casserole.</phrase>
+		<phrase>Elle ajoute les oignons et de+l'eau.</phrase>
+		<phrase>Elle fait cuire pedant 15 minutes.</phrase>
+		<phrase>La soupe de la sorcière est prête.</phrase>
+	</exo>
+
+	<exo titre="Noël et Hiver">
+		<phrase>Natacha a décoré le sapin de Noël.</phrase>
+		<phrase>Elle a posé une étoile en haut du sapin.</phrase>
+		<phrase>Ce+matin, Natacha a trouvé un+beau+jouet sous le sapin.</phrase>
+		<phrase>L’hiver est là. </phrase>
+		<phrase>Il neige dehors.</phrase>
+		<phrase>Natacha regarde tomber la neige. </phrase>
+		<phrase>Elle a envie d’aller jouer dehors.</phrase>
+		<phrase>Elle s’habille très vite.</phrase>
+		<phrase>Natacha porte un bonnet pour protéger ses oreilles.</phrase>
+		<phrase>Elle enroule une écharpe autour de son cou.</phrase>
+		<phrase>Elle enfile son manteau et+ses+nouvelles+bottes+bleues.</phrase>
+		<phrase>Elle n’oublie pas+de mettre ses+moufles.</phrase>
+		<phrase>Natacha a perdu ses moufles dehors. </phrase>
+		<phrase>La voisine les a ramenées à+sa+maman.</phrase>
+		<phrase>Le+lendemain, Natacha est malade. </phrase>
+		<phrase>Papa lui dit de dormir. </phrase>
+		<phrase>Samedi, elle ira mieux.</phrase>
+	</exo>	
+
+	<exo titre="La vache et le cheval">
+		<phrase>La vache mange de l’herbe.</phrase>
+		<phrase>La vache dort dans une étable.</phrase>
+		<phrase>Le petit de a vache est le veau.</phrase>
+		<phrase>On peut boire le lait de la vache.</phrase>
+		<phrase>La vache a des sabots.</phrase>
+		<phrase>Le cheval a quatre pattes.</phrase>
+		<phrase>Le cheval vit dans une écurie.</phrase>
+		<phrase>Le petit du cheval est le moulin.</phrase>
+		<phrase>Le cheval court vite.</phrase>
+		<phrase>Le cheval a des sabots.</phrase>
+		<phrase>Le cheval a une crinière.</phrase>
+	</exo>
+
+	<exo titre="La poule et le cochon">
+		<phrase>La poule pond des oeufs.</phrase>
+		<phrase>La poule se nourrit de graines.</phrase>
+		<phrase>La poule a des plumes.</phrase>
+		<phrase>La poule a deux ailes.</phrase>
+		<phrase>Le petit de la poule est le poussin.</phrase>
+		<phrase>La poule a une crête rouge sur la tête.</phrase>
+		<phrase>La poule caquette.</phrase>
+		<phrase>Le cochon aime se rouler dans la boue.</phrase>
+		<phrase>Le cochon a un groin.</phrase>
+		<phrase>Le cochon mange de tout.</phrase>
+		<phrase>Le cochon dort dans une porcherie.</phrase>
+		<phrase>Le cochon a quatre pattes.</phrase>
+	</exo>
+
+	<exo titre="Le canard et le mouton">
+		<phrase>Le canard a un bec.</phrase>
+		<phrase>Le canard a des pattes palmées pour nager.</phrase>
+		<phrase>Le petit du canard est le caneton.</phrase>
+		<phrase>Le canard a deux ailes.</phrase>
+		<phrase>Avec la laine du mouton, on fait des pulls.</phrase>
+		<phrase>Le petit du mouton est l’agneau.</phrase>
+		<phrase>Le mouton mange de l’herbe.</phrase>
+		<phrase>Le mouton a deux oreilles.</phrase>
+		<phrase>Le mouton a deux pattes.</phrase>
+	</exo>
+
+	<exo titre="Chipie est malade">
+		<phrase>Chipie est un gros chat qui dort tout+le+temps.</phrase>
+		<phrase>Chipie a disparu!</phrase> 
+		<phrase>Je ne la trouve nulle part!</phrase>
+		<phrase>Il faut appeler la police !</phrase>
+		<phrase>Chipie n’arrêtait pas de+miauler dans+son+panier.</phrase>
+		<phrase>Papa est allé+avec elle chez+le+vétérinaire. </phrase>
+		<phrase>Ils vont rentrer bientôt.</phrase>
+		<phrase>Thomas court devant la maison pour attendre leur retour.</phrase>
+		<phrase>Il fait déjà presque noir.</phrase>
+	</exo>
+
+	<exo titre="Carnaval : Le martien">
+		<phrase>J’ai décidé de me déguiser en martien.</phrase> 
+		<phrase>Je vis sur une planète lointaine.</phrase> 
+		<phrase>Je suis très grand.</phrase> 
+		<phrase>J’ai un gros casque sur la tête.</phrase> 
+		<phrase>J'ai un pantalon rayé.</phrase>
+		<phrase>Il y a des antennes sur ma tête.</phrase>
+		<phrase>J'ai le visage tout vert.</phrase>
+	</exo>
+
+	<exo titre="Carnaval : Le clown">
+		<phrase>J’ai décidé de me déguiser en clown.</phrase>
+		<phrase>J’ai trouvé une mallette.</phrase> 
+		<phrase>J’ai enfilé un grand pantalon.</phrase> 
+		<phrase>J’ai mis un chapeau jaune.</phrase>
+		<phrase>J’ai trouvé de longues chaussures.</phrase>
+		<phrase>J’ai trouvé une fleur.</phrase>
+		<phrase>Je l'ai accrochée à mon chapeau.</phrase> 
+		<phrase>J’ai trouvé un noeud papillon. </phrase>
+		<phrase>Je suis comique.</phrase>
+	</exo>
+
+	<exo titre="Carnaval : la sorcière">
+		<phrase>J’ai décidé de me déguiser en sorcière!</phrase>
+		<phrase>J’ai mis une vieille robe blanche.</phrase>
+		<phrase>J’ai collé des petites araignées dessus.</phrase>
+		<phrase>Je porte un chapeau pointu.</phrase>
+		<phrase>Il est garni d’une jolie lune noire.</phrase> 
+		<phrase>Dans+le+grenier, j’ai trouvé une perruque avec des cheveux longs+et+bouclés.</phrase>
+		<phrase>J’ai enfilé des bottes très pointues.</phrase>
+		<phrase>Je ressemble à une+mystérieuse petite+sorcière.</phrase>
+		<phrase>Je parie que personne ne me reconnaîtra.</phrase>
+	</exo>
+
+	<exo titre="Le lever de Luna">
+		<phrase>Luna se lève.</phrase>
+		<phrase>Luna se lave les dents dans la salle de bain.</phrase>
+		<phrase>Luna s’habille.</phrase>
+		<phrase>Luna mange ses céréales.</phrase>
+		<phrase>Elle boit son lait.</phrase>
+		<phrase>Elle prend son cartable.</phrase>
+		<phrase>Elle y glisse sa poupée.</phrase>
+		<phrase>Elle part à l’école avec son frère.</phrase>
+	</exo>
+	
+	<exo titre="Phrases en vrac 1">
+		<phrase>Le chat avale une souris.</phrase>
+		<phrase>L'avion vole dans le ciel.</phrase>
+		<phrase>La tarte cuit dans le four.</phrase>
+		<phrase>Le lapin a attrapé un chasseur.</phrase>
+		<phrase>Le lion dort au soleil.</phrase>
+		<phrase>Le bol est dans l’évier.</phrase>
+		<phrase>Le garçon est assis à table.</phrase>
+		<phrase>Les enfants nagent dans l’océan.</phrase>
+		<phrase>Sa mère adore la glace.</phrase>
+		<phrase>Le vélo roule sur la route.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 2">
+		<phrase>Le hérisson dort sur l'herbe.</phrase>
+		<phrase>Le robinet fuit.</phrase>
+		<phrase>Sa mère fait le ménage.</phrase>
+		<phrase>Elle met du poivre dans la soupe.</phrase>
+		<phrase>Elle chante une chanson.</phrase>
+		<phrase>Il change un drap.</phrase>
+		<phrase>La soupe est bonne.</phrase>
+		<phrase>Il se coiffe avec un peigne.</phrase>
+		<phrase>Le serpent glisse dans l’herbe.</phrase>
+		<phrase>Le chien dort dans sa niche.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 3">
+		<phrase>Il a construit sa maison dans cette rue.</phrase>
+		<phrase>L’ours blanc se repose sur la banquise.</phrase>
+		<phrase>Le dentiste lui a soigné deux carries.</phrase>
+		<phrase>La chenille se transforme en papillon.</phrase>
+		<phrase>Elle a préparé une tarte aux fraises.</phrase>
+		<phrase>La poule pond un oeuf.</phrase>
+		<phrase>Il est très malade.</phrase>
+		<phrase>Il adore manger des bonbons.</phrase>
+		<phrase>Quatre cheveux ont poussé sur sa tête.</phrase>
+		<phrase>Le train est encore en retard.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 4">
+		<phrase>Le chat mange la souris.</phrase>
+		<phrase>La lune est jaune.</phrase>
+		<phrase>La plage est couverte d’algues.</phrase>
+		<phrase>La mouette vole dans le ciel.</phrase>
+		<phrase>Les verres sont sales.</phrase>
+		<phrase>Les feuilles tombent des arbres.</phrase>
+		<phrase>Le jardinier coupe les branches.</phrase>
+		<phrase>La voiture tire une remorque.</phrase>
+		<phrase>Les fraises sont dans le panier.</phrase>
+		<phrase>La salade est verte.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 5">
+		<phrase>Il enfile ses chaussettes.</phrase>
+		<phrase>Le four est en panne.</phrase>
+		<phrase>Il habite dans cette rue.</phrase>
+		<phrase>Il porte une bonnet sur la tête.</phrase>
+		<phrase>Il a besoin de ses deux bras pour porter ce colis.</phrase>
+		<phrase>Le canard nage dans la mare.</phrase>
+		<phrase>Il y a un trou dans le mur.</phrase>
+		<phrase>Sa chemise est déchirée.</phrase>
+		<phrase>La copine de son frère adore les promenades.</phrase>
+		<phrase>Il adore jouer avec son chien.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 6">
+		<phrase>Rémi peut rester sans respirer pendant dix secondes.</phrase>
+		<phrase>Le lion se prélasse sous un arbre.</phrase>
+		<phrase>Le poisson tourne en rond dans son bocal.</phrase>
+		<phrase>Le boucher a préparé des poulets rôtis pour ses clients.</phrase>
+		<phrase>La maîtresse est malade.</phrase>
+		<phrase>Son grand-père a un nouveau dentier.</phrase>
+		<phrase>Le pigeon s’envole.</phrase>
+		<phrase>Mon voisin a trouvé une lampe pour son salon.</phrase>
+		<phrase>Gilles s’est acheté un nouveau manteau.</phrase>
+		<phrase>Pierre a construit un abri de jardin.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 7">
+		<phrase>Sa mère a acheté un bouquet de tulipes.</phrase>
+		<phrase>Le chien a enterré son os dans le jardin.</phrase>
+		<phrase>La fusée s’est posée sur la lune.</phrase>
+		<phrase>Le bébé a bu son biberon.</phrase>
+		<phrase>La cane a eu des canetons.</phrase>
+		<phrase>Comme ils sont petits!</phrase>
+		<phrase>Les garçons font du théâtre.</phrase>
+		<phrase>Ils préparent un spectacle.</phrase>
+		<phrase>Ils jouent aux billes.</phrase>
+		<phrase>Elle joue au ballon avec Kevin.</phrase>
+	</exo>
+	
+	<exo titre="Phrases en vrac 8">
+		<phrase>Tu es arrivé deuxième.</phrase>
+		<phrase>Je suis arrivé juste derrière toi.</phrase>
+		<phrase>Karim a des boutons rouges.</phrase>
+		<phrase>Il est malade.</phrase>
+		<phrase>Le bocal est rempli de poissons rouges.</phrase>
+		<phrase>Alexis colle une feuille dans son cahier.</phrase>
+		<phrase>Je construis une cabane dans les arbres.</phrase>
+		<phrase>Nabila s’est cassé le bras.</phrase>
+		<phrase>Les filles vont à la piscine.</phrase>
+		<phrase>Elles participent à une compétition.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 9">
+		<phrase>C’est la maitresse.</phrase>
+		<phrase>Ce sont les deux enfants qui parlent.</phrase>
+		<phrase>L'élève va apprendre seul.</phrase>
+		<phrase>Kader va chez le coiffeur.</phrase>
+		<phrase>Il va se faire couper les cheveux.</phrase>
+		<phrase>Le chien du voisin est vieux.</phrase>
+		<phrase>Les pompiers éteignent le feu.</phrase>
+		<phrase>Je dois faire de la soupe.</phrase>
+		<phrase>Je vais acheter des légumes.</phrase>
+		<phrase>Tu as nagé plus vite que moi.</phrase>
+	</exo>
+
+	<exo titre="Phrases en vrac 10">
+		<phrase>La maîtresse demande de fermer la fenêtre.</phrase>
+		<phrase>Le gardien parle avec les enfants.</phrase>
+		<phrase>Paul s’installe pour suivre la leçon.</phrase>
+		<phrase>Le gardien attend devant l’école.</phrase>
+		<phrase>Nicolas et Mathilde sont amis.</phrase>
+		<phrase>Le vieux monsieur est sourd.</phrase>
+		<phrase>Il+y+a trop de bruit dans la classe.</phrase>
+		<phrase>La fenêtre est fermée.</phrase>
+		<phrase>Il fait très chaud.</phrase>
+		<phrase>La mer est belle.</phrase>
+		<phrase>J’ai un beau cadeau pour toi.</phrase>
+		<phrase>Thomas revient de l’école.</phrase>
+		<phrase>Akim arrive en criant.</phrase>
+		<phrase>Mehdi arrive dans le jardin.</phrase>
+	</exo>
+
+</exercices>

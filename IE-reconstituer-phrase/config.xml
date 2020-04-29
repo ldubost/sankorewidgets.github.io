@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widget"
+        id="http://uniboard.mnemis.com/widgets/Informatique-Enseignant" 
+        version="1.1"
+        width="800"
+        height="600"
+        ub:resizable="true"
+		ub:roles="content">
+   
+  		<name>Reconstituer des phrases</name>
+		<author href="http://www.informatique-enseignant.com/"
+	            email="cyrille.largillier@free.fr">Patrick Finot - empaqueté par Cyrille Largillier</author>
+		<description>Reconstituer des phrases.
+      Il est possible de modifier le contenu des phrases proposées à titre d'exemple en éditant le fichier reconstituer-phrase.xml contenu dans le dossier ressources.</description>
+		
+  		<content src="index.html"/> 
+</widget>
