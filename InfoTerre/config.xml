@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/infoterre" 
+        version="0.1"
+        width="800"
+        height="600"
+        ub:resizable="true">
+      
+  		<name>InfoTerre</name>
+		<author href="http://infoterre.brgm.fr"
+	            email="francois.bocquet@diena.org">Francois Bocquet</author>
+		<description>Accès aux bases de données du BRGM (cartes géologiques en particulier)</description>
+
+        <content src="http://infoterre.brgm.fr/viewerlite/MainTileForward.do"/>
+</widget>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:ub="http://uniboard.mnemis.com/widgets" 
+        id="meiose.swf" 
+        version="1.0"
+        width="980"
+        height="671" 
+        ub:resizable="true" >   
+  <name>meiose</name>
+  <content src="index.htm"/> 
+  <access network="true"/>
+</widget>

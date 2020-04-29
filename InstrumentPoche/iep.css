@@ -1,0 +1,28 @@
+/* 
+    Document   : iep
+    Created on : 8 déc. 2010, 14:02:42
+    Author     : laurentzamo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.logoiep{
+    width:150px;
+    vertical-align:middle;
+    border:0px;   
+}
+form{
+    font-family: Tahoma, Arial, sans serif;
+    font-size:80%;
+    display:inline;
+    vertical-align:middle;
+}

@@ -1,0 +1,481 @@
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<head>
+	<title>Labyrinthe © Patrick Kuchard CC by-NC-SA</title>
+	<style>
+		a
+		{
+			color:#fff;
+			font-weight:bold;
+			text-decoration:none;
+		}
+
+	</style>
+</head>
+
+<body onkeydown="clavier();" onload="focus();">
+<center><div id="gameframe"></div></center>
+<script type="text/javascript">
+function clavier(){
+	var dx=0;	var dy=0;
+	switch(event.keyCode)
+	{
+		case 37:dx--;event.returnValue=false;break;
+		case 38:dy--;event.returnValue=false;break;
+		case 39:dx++;event.returnValue=false;break;
+		case 40:dy++;event.returnValue=false;break;
+		default:return;
+	}
+	movePlayer(dx,dy);
+}
+
+function joypad(){
+	
+	var fleches = new Array() ;
+
+	var joypad = document.createElement("table");
+		joypad.style.position = "absolute";
+		joypad.style.zIndex = 30 ;
+		joypad.style.top = "200px" ;
+		joypad.style.left = "600px";
+
+	document.body.appendChild(joypad);
+
+	var lignes = [];
+	var cellules = [] ;
+
+
+	for (var i = 0; i < 3 ; i++) {
+
+		lignes[i] = document.createElement("tr");
+		joypad.appendChild(lignes[i]);
+
+		cellules[i] = [] ;
+
+		for (var y = 0; y < 3 ; y++) {
+
+			var cellule = document.createElement("td");
+			cellules[i][y] = cellule ;
+			lignes[i].appendChild(cellule);
+
+		};
+	};
+
+	fleches.push(document.createElement("img")) ;
+		fleches[0].src = "haut.png" ;
+		fleches[0].id = "haut" ;
+		cellules[0][1].appendChild(fleches[0]) ;
+		
+	fleches.push(document.createElement("img")) ;
+		fleches[1].src = "bas.png" ;
+		fleches[1].id = "bas" ;
+		cellules[2][1].appendChild(fleches[1]) ;
+		
+	fleches.push(document.createElement("img")) ;
+		fleches[2].src = "gauche.png" ;
+		fleches[2].id = "gauche" ;
+		cellules[1][0].appendChild(fleches[2]) ;
+
+	fleches.push(document.createElement("img")) ;
+		fleches[3].src = "droite.png" ;
+		fleches[3].id = "droite" ;
+		cellules[1][2].appendChild(fleches[3]) ;
+	
+	for(var c = fleches.length, i = 0 ; i < c ; i++ )
+	{
+		fleches[i].addEventListener('click', function(e) {
+		
+			var dx=0;	var dy=0;
+			switch(e.target.id)
+			{
+				case "haut":
+					dy-- ;
+					break ;
+				case "bas":
+					dy++ ;
+					break ;
+				case "gauche":
+					dx-- ; ;
+					break ;
+				case "droite":
+					dx++ ;
+					break ;
+				default:
+					return ;
+					break ;
+			}
+			
+			movePlayer(dx,dy);
+			
+		}, false) ;
+		
+		// joypad.appendChild(fleches[i]) ;
+	}
+
+	mover = document.createElement("div");
+		mover.style.height = "29px";
+		mover.style.width = "29px";
+		mover.style.borderRadius = "100px";
+		mover.style.backgroundColor = "white";
+		cellules[1][1].appendChild(mover);
+
+	var dragstorage = { dragging: false };
+
+	document.body.addEventListener("mouseup", function(e){
+
+		dragstorage.dragging = false ;
+
+	}, true);
+
+	document.body.addEventListener('mousedown', function(e) {
+	
+		if(e.target == mover)
+		{
+			dragstorage.dragging = true ;
+			dragstorage.offsetX = e.clientX - joypad.offsetLeft;
+			dragstorage.offsetY = e.clientY - joypad.offsetTop;;
+		}
+
+	}, true) ;
+
+	document.addEventListener('mousemove', function(e){
+	
+		if(dragstorage.dragging)
+		{	
+			var posLeft = e.clientX - dragstorage.offsetX ;
+			var posTop = e.clientY - dragstorage.offsetY ;
+				
+			if(posLeft > 0)
+				joypad.style.left = posLeft + 'px' ;
+					
+			if(posTop > 0) 
+				joypad.style.top = posTop + 'px' ;
+		}
+
+	}, true);
+	
+}
+
+function startGame(niveau) {
+  document.getElementById('dialog').style.visibility='hidden';
+  mazeH = Math.floor(niveau*15); //15
+  mazeV = Math.floor(niveau*12); //12
+  size = Math.floor(picW/mazeH);  //20
+	countdown(3);
+  mouvements = 0;
+  duree = 0;
+  depart = 0;	
+	xoff = 10;
+	yoff = 10;
+	createMaze();
+	drawMaze();
+	px = 0;
+	py = 0;
+	updatePlayer(0,0);
+	drawArrows(0,0);
+	drawSortie(mazeH-1,mazeV-1, 3,0, 2,-1, 2,1);
+	gameover = false;
+	tofa=setTimeout("chrono()",3000);
+}
+
+function calculduree(duree){
+  var addZero = function(v) { return v<10 ? "0" + v : v; };
+  var n = Math.floor(duree/10);
+  var dix = duree-10*n;
+  var heures=Math.floor(n/3600);
+	var reste = n - heures*3600;
+	var minutes=Math.floor(reste/60);
+  reste -= minutes*60;
+  return addZero(heures)+":"+addZero(minutes)+":"+addZero(reste)+"."+dix;
+}
+
+function chrono(){
+	// if(tofa!=undefined)clearTimeout(tofa);else tofa=undefined;
+	duree++;
+	document.getElementById("tps").innerHTML=calculduree(duree);
+	tofa=setTimeout("chrono()",100);
+}
+
+function clickCanvas(e) {
+	var x = e.x-document.getElementById("gameframe").offsetLeft;
+	var y = e.y-document.getElementById("gameframe").offsetTop;
+	var xx = (xoff+px*size+size/2);
+	var yy = (yoff+py*size+size/2);
+	var dx = x-xx;
+	var dy = y-yy;
+	if (Math.abs(dx) > Math.abs(dy)) {
+		if (dx > size/2) {
+			movePlayer(1,0);
+		} else if (dx < -size/2) {
+			movePlayer(-1,0);
+		}
+	} else {
+		if (dy > size/2) {
+			movePlayer(0,1);
+		} else if (dy < -size/2) {
+			movePlayer(0,-1);
+		}
+	}
+}
+
+function movePlayer(dx,dy) {
+	var ok = false;
+	if ((dy == -1) && (grid[px][py][0] == 1)) ok = true;
+	if ((dy == 1) && (grid[px][py][1] == 1)) ok = true;
+	if ((dx == 1) && (grid[px][py][2] == 1)) ok = true;
+	if ((dx == -1) && (grid[px][py][3] == 1)) ok = true;
+	
+	if (ok) {
+	  showDeplacements(++mouvements); 
+		canvasover2.clearRect(0,0,picW+size,picH+size);
+		drawStep(px,py);
+		updatePlayer(dx,dy);
+		drawArrows(px,py);
+	}
+	if ((px == mazeH-1) && (py == mazeV-1)) {
+		document.getElementById("MyCanvasOver").style.visibility = "hidden";
+		gameover = true;
+		showDialog();
+	}
+}
+
+function drawMaze() {
+	for(var i=0;i<maze.length;i++) {
+		var x = maze[i][0];
+		var y = maze[i][1];
+		var walls = maze[i][2];
+		if (walls[0] == 0) {
+			drawLine(xoff+x*size,yoff+y*size,xoff+x*size+size,yoff+y*size,"#FFF",2);
+		}
+		if (walls[3] == 0) {
+			drawLine(xoff+x*size,yoff+y*size,xoff+x*size,yoff+y*size+size,"#FFF",2);
+		}
+		if ((x == mazeH-1) && (y < mazeV-1)) {
+			drawLine(xoff+x*size+size,yoff+y*size,xoff+x*size+size,yoff+y*size+size,"#FFF",2);
+		}
+		if (y == mazeV-1) {
+			drawLine(xoff+x*size,yoff+y*size+size,xoff+x*size+size,yoff+y*size+size,"#FFF",2);
+		}
+	}
+}
+
+function createMaze() {
+  h = mazeH;
+  v = mazeV;
+  initMaze();
+  lastcount = 0;
+  while (true) {
+  	setNum = Math.floor(Math.random()*maze.length);
+  	cellNum = Math.floor(Math.random()*maze[setNum].length);
+    wall = Math.floor(Math.random()*4);
+    
+    if (maze[setNum][cellNum][2][wall] != 0) continue;
+    
+    var x = maze[setNum][cellNum][0];
+    var y = maze[setNum][cellNum][1];
+
+	if ((wall == 0) && (y == 0)) continue;    
+	if ((wall == 1) && (y == v-1)) continue;    
+	if ((wall == 2) && (x == h-1)) continue;    
+	if ((wall == 3) && (x == 0)) continue;    
+
+	if (wall == 0) other = findCell(x,y-1);
+	if (wall == 1) other = findCell(x,y+1);
+	if (wall == 2) other = findCell(x+1,y);
+	if (wall == 3) other = findCell(x-1,y);
+    
+    if (other[0] == setNum) continue;
+    
+    if (wall == 0) oppositeWall = 1;
+    if (wall == 1) oppositeWall = 0;
+    if (wall == 2) oppositeWall = 3;
+    if (wall == 3) oppositeWall = 2;
+    
+    maze[setNum][cellNum][2][wall] = 1;
+    maze[other[0]][other[1]][2][oppositeWall] = 1;
+    
+    unionSets(setNum,other[0])
+    
+    if ((maze.length/10) != lastcount) {
+      lastcount = (maze.length/10);
+    }
+    if (maze.length == 1) break;
+  }
+  
+  maze = maze[0];
+  indexMaze();
+}
+
+function indexMaze() {
+	grid = new Array();
+	for(var x=0;x<mazeH;x++) {
+		grid[x] = new Array();
+		for(var y=0;y<mazeH;y++) {
+			grid[x][y] = [0,0,0,0];
+		}
+	}
+	for(var i=0;i<maze.length;i++) {
+		grid[maze[i][0]][maze[i][1]] = maze[i][2];
+	}
+}
+
+function initMaze() {
+  maze = new Array();
+  for(var x=0;x<mazeH;x++) {
+  	for(var y=0;y<mazeV;y++) {
+  		maze.push([ [x, y, [0,0,0,0]] ]);
+    }
+  }
+}
+
+function findCell(x, y) {
+  for(var i=0;i<maze.length;i++) {
+    for(var j=0;j<maze[i].length;j++) {
+      if (maze[i][j][0] == x) {
+        if (maze[i][j][1] == y) {
+          return [i,j];
+        }
+      }
+    }
+  }
+}
+
+function unionSets(s1, s2) {
+  for(var i=0;i<maze[s2].length;i++) {
+    maze[s1].push(maze[s2][i]);
+  }
+  maze.splice(s2,1);
+}
+
+function drawStep(sx,sy) {
+	canvasstep2.beginPath();
+	canvasstep2.fillStyle = "#cccc00";
+	canvasstep2.arc(xoff+sx*size+size/2, yoff+sy*size+size/2, size*.15, 0, .01, 1);
+	canvasstep2.fill();
+	canvasstep2.closePath();
+}
+
+function updatePlayer(dx,dy) {
+	//canvasover2.clearRect(xoff+px*size+1,yoff+py*size+1,size-2,size-2);
+	px += dx;
+	py += dy;
+	canvasover2.beginPath();
+	canvasover2.fillStyle = "#FFFF00";
+	canvasover2.arc(xoff+px*size+size/2, yoff+py*size+size/2, size*.3, 0, .01, 1);
+	canvasover2.fill();
+	canvasover2.closePath();
+}
+
+function drawArrows(x,y) {
+	if (grid[x][y][2] == 1) drawArrow(x,y, 3,0, 2,-1, 2,1);
+	if (grid[x][y][3] == 1) drawArrow(x,y, -3,0, -2,-1, -2,1);
+	if (grid[x][y][0] == 1) drawArrow(x,y, 0,-3, -1,-2, 1,-2);
+	if (grid[x][y][1] == 1) drawArrow(x,y, 0,3, -1,2, 1,2);
+}
+
+function drawLine(x1,y1,x2,y2,c,w) {
+	canvas2.beginPath();
+	canvas2.strokeStyle = c;
+	canvas2.lineWidth = w;
+	canvas2.moveTo(x1,y1);
+	canvas2.lineTo(x2,y2);
+	canvas2.stroke();
+	canvas2.closePath();
+}
+
+function drawArrow(x,y, x1,y1, x2,y2, x3,y3) {
+	var bx = xoff+x*size+size/2;
+	var by = yoff+y*size+size/2;
+	var r = size/3;
+	canvasover2.beginPath();
+	canvasover2.fillStyle = "#cccc00";
+	canvasover2.lineWidth = 1;
+	canvasover2.moveTo(bx+x1*r, by+y1*r);
+	canvasover2.lineTo(bx+x2*r, by+y2*r);
+	canvasover2.lineTo(bx+x3*r, by+y3*r);
+	canvasover2.lineTo(bx+x1*r, by+y1*r);
+	canvasover2.fill();
+	canvasover2.closePath();
+}
+
+function drawSortie(x,y, x1,y1, x2,y2, x3,y3) {
+	var bx = xoff+x*size+size/2;
+	var by = yoff+y*size+size/2;
+	var r = size/3;
+	canvasstep2.beginPath();
+	canvasstep2.fillStyle = "#0A0";
+	canvasstep2.lineWidth = 1;
+	canvasstep2.moveTo(bx+x1*r, by+y1*r);
+	canvasstep2.lineTo(bx+x2*r, by+y2*r);
+	canvasstep2.lineTo(bx+x3*r, by+y3*r);
+	canvasstep2.lineTo(bx+x1*r, by+y1*r);
+	canvasstep2.fill();
+	canvasstep2.closePath();
+}
+
+function drawCircle(x,y,r,c) {
+	canvas2.beginPath();
+	canvas2.fillStyle = c;
+	canvas2.arc(x, y, r, 0, .01, 1);
+	canvas2.fill();
+	canvas2.closePath();
+}		
+
+function showDeplacements(coups){
+	document.getElementById("cps").innerHTML=coups+" d&eacute;placement"+plur(coups);
+}
+
+function plur(a){return a>1?"s":"";}
+
+function countdown(n){
+  if(n>-1){	
+    document.getElementById("countdown").style.visibility = "visible";
+    if(n==0){
+    	joypad() ;
+      document.getElementById("countdown").innerHTML = "GO !";
+      document.getElementById("countdown").style.color = "green";
+    }else
+      document.getElementById("countdown").innerHTML = n+"...";
+	  dummy=setTimeout("countdown("+(n-1)+")", n>0 ? 1000:500);
+  }else{
+    document.getElementById("countdown").style.visibility = "hidden";
+  }
+}
+
+function showDialog(){
+  clearTimeout(tofa);	
+	document.getElementById("dialog").innerHTML = "Bravo !<BR><BR>Vous avez r&eacute;solu le labyrinthe<br>en "+mouvements+" mouvements<br>et en mettant un temps de<br>"+document.getElementById('tps').innerHTML+"<br><br><A HREF='#' onClick='window.location.reload();return false'>Rejouer</A>";
+	document.getElementById("dialog").style.visibility = "visible";
+}
+
+function niveaux(){
+	document.getElementById("dialog").innerHTML = "Veuillez choisir la difficult&eacute;...<br><br><br><A HREF='#' onClick='startGame(1);return false;'>1. Facile (15 x 12)</a><br><A HREF='#' onClick='startGame(1.5);return false;'>2. Moyen (22 x 18)</a><br><A HREF='#' onClick='startGame(2);return false;'>3. Difficile (30 x 24)</a>";
+	document.getElementById("dialog").style.visibility = "visible";
+}
+
+mazeH = 30; //15
+mazeV = 24; //12
+picW = 580; //size*mazeH; //300
+picH = 480; //size*mazeV; //240
+size = Math.floor(picW/mazeH);  //20
+
+document.write("<DIV ID=game STYLE='position:relative; top:0; left:0; width:"+(20+picW)+"px; height:"+(20+picH)+"px; margin:0; padding:0;'>");
+document.write("<canvas id=MyCanvas width='"+(20+picW)+"' height='"+(20+picH)+"' style='position:absolute; left:0px; top:0px; margin:0; padding:0; z-index:0' /></canvas>");
+document.write("<canvas id=MyCanvasStep width='"+(20+picW)+"' height='"+(20+picH)+"' style='position:absolute; left:0px; top:0px; margin:0; padding:0; z-index:1'/></canvas>");
+document.write("<canvas id=MyCanvasOver width='"+(20+picW)+"' height='"+(20+picH)+"' style='position:absolute; left:0px; top:0px; margin:0; padding:0; z-index:2' onClick='clickCanvas(event);return false;'/></canvas>");
+document.write("<DIV ID=dialog STYLE='z-index:3;position: absolute; top: "+Math.floor((picH-180)/3)+"; left: "+Math.floor((picW-220)/2)+"; width:220px; height:180px; padding:10px; text-align:center; font-family:Segoe UI,Calibri,Myriad Pro,Myriad,Trebuchet MS,Helvetica,Arial,sans-serif; color: white; font-size:14px; font-weight:bold; background-color:#000; border:1px solid white; visibility:hidden;'></DIV>");
+document.write("<DIV ID=countdown STYLE='position: absolute; top: "+Math.floor((picH-100)/3)+"; left: "+Math.floor((picW-220)/2)+"; width:220px; height:100px; padding:10px; text-align:center; font-family:Segoe UI,Calibri,Myriad Pro,Myriad,Trebuchet MS,Helvetica,Arial,sans-serif; color:red; font-size:136px; font-weight:bold; visibility:hidden;'></DIV>");
+document.write("<br clear=all></div>");
+document.write("<DIV style='background-color:blue;font-family:Segoe UI,Calibri,Myriad Pro,Myriad,Trebuchet MS,Helvetica,Arial,sans-serif;'><span ID=cps style='color:#FFF;float:left;'>0 d&eacute;placement</span><span style='color:#FFF;float:right;'>Temps : <span ID=tps>00:00:00.0</span></span></DIV>");
+document.write("<br clear=all>");
+document.write("<center><A HREF='#' style='font-family:Segoe UI,Calibri,Myriad Pro,Myriad,Trebuchet MS,Helvetica,Arial,sans-serif;' onClick='window.location.reload();return false;'>Recommencer un autre labyrinthe</A></center>");
+canvas = document.getElementById("MyCanvas");
+canvas2 = canvas.getContext("2d");
+canvasstep = document.getElementById("MyCanvasStep");
+canvasstep2 = canvasstep.getContext("2d");
+canvasover = document.getElementById("MyCanvasOver");
+canvasover2 = canvasover.getContext("2d");
+document.body.style.backgroundColor = "black" ;
+niveaux();
+
+</script>
+</body></html>
