@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/Meetings" 
+        version="0.1"
+        width="800"
+        height="600"
+        ub:resizable="true">
+      
+  		<name>Preuve de concept visio-conference</name>
+		<author href="http://meetings.io/"
+	            email="fbocquet@laposte.net">Francois</author>
+		<description>Meetings Sankoré</description>
+
+        <content src="https://meetings.io/meet/1dV701Q0vaS">
+</widget>

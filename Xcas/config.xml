@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/xcas" 
+        version="0.1"
+        width="875"
+        height="550"
+        ub:resizable="true">
+      
+  		<name>Xcas</name>
+		<author href="xCas"
+	            email="francois.bocquet@diena.org">Francois Bocquet</author>
+		<description>XCAs en ligne Ce site vous permet d'utiliser partiellement le logiciel de mathématiques XCAS dans votre navigateur, sans l'installer sur votre ordinateur. Les calculs seront faits par le serveur.
+
+</description>
+
+        <content src="http://www.xcasenligne.fr/giac_online/demoGiacPhp.php"/>
+</widget>
