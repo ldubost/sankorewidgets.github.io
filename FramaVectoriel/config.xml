@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/framavectoriel" 
+        version="0.1"
+        width="800"
+        height="600"
+        ub:resizable="true">
+      
+  		<name>Dessin vectoriel</name>
+		<author href="http://framavectoriel.org"
+	            email="francois.bocquet@diena.org">Francois Bocquet</author>
+		<description>Outil de dessin vectoriel en ligne</description>
+
+        <content src="http://framavectoriel.org/svg-editor.html"/>
+</widget>
