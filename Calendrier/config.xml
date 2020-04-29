@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://http://www.w3.org/ns/widgets"
+   id="source originale http://arc.tees.ac.uk/calendarWidget"
+   version="1.0"
+   height="380"
+   width="430"
+   resizable="true"
+   >
+  <name>Calendrier</name>
+  <description>Calendrier perpétuel</description>
+  <content src="index.html"/>
+  <author>Adrien BOCQUET licence CC By SA</author>
+</widget>

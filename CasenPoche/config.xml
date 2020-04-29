@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:ub="http://uniboard.mnemis.com/widgets/CasenPoche" 
+        id="iep" 
+        version="1.0"
+        width="995"
+        height="666" 
+        ub:resizable="true" >   
+  <name>Casenpoche (Sesamaths)</name>
+  <content src="index.htm"/> 
+</widget>

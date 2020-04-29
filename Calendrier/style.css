@@ -1,0 +1,135 @@
+body
+{
+
+	font-size: 20px;
+	font-family: arial ;
+
+	max-width: 800px;
+	margin: auto;
+
+	color: #0d0d0d;
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+a, a:visited
+{
+	text-decoration: none; 
+	color: #0d0d0d;
+}
+
+a:hover, a:active 
+{
+	color: #555555;
+}
+
+#content
+{
+	margin: 20px ;
+}
+
+#mois
+{
+	border-radius: 7px 7px 0 0 ;
+}
+
+#annee, #today
+{
+	border-radius: 0 0 7px 7px ;
+}
+
+p, table
+{
+	width: 100% ;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+table
+{
+	padding: 10px;
+	border-collapse: collapse;
+
+	border: 1px solid #b0dce7;
+}
+
+th
+{
+	padding: 3px ;
+	overflow: hidden;
+}
+
+td, th
+{
+	border-left: 1px solid #b0dce7 ;
+}
+
+/*-------------------*/
+
+.title, #today
+{
+	text-align: center;
+
+	background-color: #b0dce7 ;
+	opacity: 0.8 ;
+
+	padding: 5px;
+}
+
+#today
+{
+	width: 50% ;
+	min-width: 250px;
+
+	margin: auto ;
+}
+
+/*-------------------*/
+
+td
+{
+	text-align: center ;
+	padding: 5px;
+}
+
+.out
+{
+	opacity: 0.4 ;
+}
+
+/*----------------------*/
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+
+/*----------------------*/
+
+.selected
+{
+	background-color: #0d0d0d ;
+	color: white;
+	opacity: 0.7 ;
+}
+
+.today
+{
+	background-color: #b0dce7 ;
+	opacity: 0.8 ;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        version="1.1"
+        width="360"
+        height="270"
+		ub:roles="tool"
+		ub:resizable="false">
+  <author>Team Alpha année 2013, Université de Savoie</author>
+  <name>Couleur</name>
+  <content src="index.html"/>
+</widget>

@@ -1,0 +1,27 @@
+/*
+	if (tool ==  "pen"){
+		//window.sankore.setTool('pen');
+		window.sankore.setPenColor('#' + pColor);
+		//sankore.returnStatus("PEN installed", true);
+	}
+	else if (tool == 'marker'){
+		//missing alpha parameter...
+		//checked opensankore 3.1 source and it appears that setMarkerAlpha is
+		//not implemented in setMarkerColor method nor setMarkerAlpha is not
+		//callable from opensankore API
+		window.sankore.setMarkerColor('#' + pColor);
+		//	window.sankore.setMarkerAlpha(0.90);
+		sankore.returnStatus("MARKER installed", true);
+	}
+	else if (tool == 'line'){
+		//window.sankore.setTool('line');
+		window.sankore.setPenColor('#' + pColor);
+		//window.sankore.setArrowColor('#' + pColor);
+		sankore.returnStatus("LINE installed", true);
+	}*/
+	/*else{
+		window.sankore.setTool('pen');
+		window.sankore.setPenColor('#' + pColor);
+		sankore.returnStatus("PEN installed", true);
+		
+	}*/
