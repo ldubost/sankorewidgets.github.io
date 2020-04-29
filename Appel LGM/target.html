@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]>
+				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+</head>
+
+<body class="body">
+
+	<section class="section">
+
+		<article class="article">
+			
+			<p id="flashbag"></p>
+
+		</article>
+		
+	</section>
+
+	<script type="text/javascript">
+
+		 var stat = Math.floor(Math.random() * 4)+1;
+		 var flashbag = document.querySelector("#flashbag");
+
+		 if(stat == 4)
+		 {
+		 	flashbag.innerHTML = "Les serveurs du Rectorat sont momentanément indisponibles.<br><a href='index.html'>Veuillez recommencer votre appel, Merci.</a>" ;
+		 }
+		 else
+		 {
+		 	flashbag.innerHTML = "Votre appel a été transmis à la Vie Scolaire" ;
+		 }
+
+	</script>
+
+	
+</body>
+</html>

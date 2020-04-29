@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+
+<!--
+    Copyright (c) 2013 Gabriele Mondada
+    Released under the MIT license (same as jQuery)
+    http://jquery.org/license
+-->
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="800" height="480" 
+    onload="init(evt)" >
+
+<script type="text/ecmascript">
+//<![CDATA[
+
+var svgXLink = "http://www.w3.org/1999/xlink";
+var svgNS = "http://www.w3.org/2000/svg";
+
+var sliceWidth = 30;
+var sliceHeight = 100;
+var sliceCount = 20;
+
+var seq = 0;
+var t = 0.3;
+var timer = null;
+
+function init(){
+
+    var elem = null;
+
+    for (var i=0; i<sliceCount; i++) {
+        var grpElem = document.createElementNS(svgNS, "g");
+        var sliceElem = document.createElementNS(svgNS, "path");
+        sliceElem.setAttributeNS(null, "class", "slice");        
+        sliceElem.setAttributeNS(null, "style", "fill:#ffc0c0; stroke:#ff0000");
+        grpElem.appendChild(sliceElem);
+        if (elem) {
+            var subElem = document.createElementNS(svgNS,"g");
+            subElem.setAttributeNS(null, "class", "subslice");
+            subElem.appendChild(elem);
+            grpElem.appendChild(subElem);
+        }
+
+        elem = grpElem;
+    }
+
+    var pie = document.getElementById("pie");
+    pie.appendChild(elem);
+    
+    setLinkAngle(360 / sliceCount * t);
+
+    var rect = document.getElementById("pir_x_r");
+    rect.setAttributeNS(null, "width", "" + sliceWidth * sliceCount);
+    rect.setAttributeNS(null, "height", "" + sliceHeight);
+}
+
+function setSliceLinkAttrs(elem, path, transform) {
+    if (!elem.getAttribute)
+        return;
+    if (elem.getAttribute("class") == "slice")
+        elem.setAttributeNS(null, "d", path);
+    if (elem.getAttribute("class") == "subslice")
+        elem.setAttributeNS(null, "transform", transform);
+    for (var i=0; i<elem.childNodes.length; i++)
+        setSliceLinkAttrs(elem.childNodes[i], path, transform);
+}
+
+function setLinkAngle(angle) {
+
+    var a = Math.sin(angle / 2 * Math.PI / 180);
+    var r = 100000; // cosidered infinite
+    if (a != 0)
+        r = sliceWidth / 2 / a;
+
+    var d = "M0,0 "
+          + "L" + sliceWidth / 2 + "," + sliceHeight + " "
+          + "L" + sliceWidth + ",0 "
+          + "A" + r + "," + r + " 0 0,0 0,0 "
+          + "Z";
+        
+    var t = "translate(" + sliceWidth + ",0) rotate(" + angle + ")";
+
+    var pie = document.getElementById("pie");
+    setSliceLinkAttrs(pie, d, t);
+}
+
+function tick() {
+
+    if (t == 0) {
+        // we are starting
+        onAnimBegin();
+    }
+
+    t = t + 0.05;
+
+    if (t > 1)
+        t = 1;
+
+    onAnimUpdate();
+
+    if (t == 1) {
+        // we reach the end
+        clearInterval(timer);
+        timer = null;
+        onAnimEnd();
+        t = 0;
+        seq = seq + 1;
+        if (seq >= 4)
+            seq = 0;
+    }
+}
+
+function onMouseUp(evt){
+    if (!timer)
+        timer = setInterval(tick, 1000 / 16);
+}
+
+function onAnimUpdate() {
+    switch (seq) {
+        case 0:
+            var angle = 360 / sliceCount * t;
+            setLinkAngle(angle);
+            break;
+        case 1:
+            var angle = 360 / sliceCount * (1 - t);
+            setLinkAngle(angle);
+            break;
+        case 2:
+            var rect = document.getElementById("pir_x_r");
+            rect.setAttributeNS(null, "opacity", toFixed(t, 3));
+            break;
+        case 3:
+            var rect = document.getElementById("pir_x_r");
+            rect.setAttributeNS(null, "opacity", toFixed(1 - t, 3));
+            break;
+    }
+}
+
+function onAnimBegin() {
+    //var rect = document.getElementById("pir_x_r");
+    //rect.setAttributeNS(null, "opacity", "0");
+}
+
+function onAnimEnd() {
+    //if (t == 0) {
+    //    var rect = document.getElementById("pir_x_r");
+    //    rect.setAttributeNS(null, "opacity", "1");
+    //}    
+}
+
+function toFixed(value, precision) {
+    var power = Math.pow(10, precision || 0);
+    return String(Math.round(value * power) / power);
+}
+
+// ]]></script>
+
+<g transform="translate(0, 480) scale(1, -1)">
+
+
+    <g transform="translate(160, 30)" id="pie">
+        <rect id="pir_x_r" x="0"  y="0" width="1" height="0" opacity="0"
+            style="fill:#ffe0c0; stroke:#ff8000"/>
+    </g>
+
+    <rect id="canvas" x="0"  y="0" width="800" height="480" opacity="0" 
+        pointer-events="visible"
+        onmouseup="onMouseUp(evt)"/>
+</g>
+
+
+</svg>

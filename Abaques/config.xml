@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        id="abaque" 
+        version="0.1"
+        width="492"
+        height="492" 
+        ub:resizable="false">
+		<name>Abaque</name>
+		<author href="http://www.micetf.fr" email="webmaster@micetf.fr">MiCetF</author>
+		<description>Abaque</description>
+		<content src="index.html"/>
+</widget>

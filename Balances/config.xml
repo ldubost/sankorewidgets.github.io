@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:ub="http://uniboard.mnemis.com/widgets/Balances" 
+        id="balances.swf" 
+        version="1.0"
+        width="854"
+        height="638" 
+        ub:resizable="true" >   
+  <name>Balances</name>
+  <content src="balance-interactive old.html"/> 
+</widget>

@@ -1,0 +1,128 @@
+$body:		rgb(250, 250, 250);
+
+
+.body
+{
+	background: $body;
+}
+
+
+/***********************************************************************************/
+/* Header */
+$header:     rgba(235, 235, 235, 0.9);
+$user:       #e67e22;
+$user-color: #fefefe;
+$logo:       #e67e22;
+$logo-color: #fefefe;
+
+/***********************************************************************************/
+/* Nav */
+$button:        $header;
+$button-color:  inherit;
+$nav:	        $header;
+$nav-color:     inherit;
+$menu-color: 	inherit;
+
+/***********************************************************************************/
+/* Section */
+$person: 		#cdf1e2;
+$away: 			#ffa9a9;
+$late: 			#ffc75f;
+
+.section
+{
+	width: 100%;
+	padding: 5%;
+
+	@include box-sizing(border-box);
+}
+
+.section-title
+{
+	margin: 40px;
+	text-align: center;
+	font-size: 1.8em;
+}
+
+.search
+{
+	display: block;
+	margin: 0 0 10px 15px;
+	width: 100%;
+
+	@include box-sizing(border-box);
+
+	label
+	{
+		display: inline-block;
+		margin: 0 10px 0 0;
+	}
+
+	#search
+	{
+		width: 170px;
+		display: inline-block;
+	}
+}
+
+.hour
+{
+		display: block;
+	margin: 0 0 10px 15px;
+	width: 100%;
+
+	@include box-sizing(border-box);
+
+	label
+	{
+		display: inline-block;
+		margin: 0 10px 0 0;
+	}
+
+	#hour
+	{
+		display: inline-block;
+	}
+}
+
+.liste-eleves
+{
+	@include box-sizing(border-box);
+}
+
+.person
+{
+	display: inline-block;
+	width: 40px;
+	@include box-sizing(border-box);
+	padding: 8px 8px 0 8px;
+	margin: 2.1%;
+	cursor: pointer;
+
+	background: $person;
+}
+
+.away
+{
+	background: $away;
+}
+
+.late
+{
+	background: $late;
+}
+
+.eleve-img
+{
+	max-width: 95%;
+	display: block;
+	margin: auto;
+}
+
+.name
+{
+	margin: 2px auto;
+	display: block;
+	text-align: center;
+	padding: 7px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]>
+				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+	<!--link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'-->
+	<link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+</head>
+
+<body class="body">
+	<br>
+<H2>Appel : Lycée du Grésivaudan Année 2013-2014</H2>
+	<section class="section">
+		<article class="article">
+			<form action="target.html">
+				<ul class="liste-eleves">
+					<li class="hour" id="day">
+					</li>
+					<li class="hour">
+						<label for="hour">Selectionner une heure</label>
+						<select id="hour">
+							<option value="8">8h-9h</option>
+							<option value="9">9h-10h</option>
+							<option value="10">10h-11h</option>
+							<option value="11">11h-12h</option>
+							<option value="13">13h30-14h30</option>
+							<option value="14">14h30-15h30</option>
+							<option value="15">15h30-16h30</option>
+							<option value="16">16h30-17h30</option>
+						</select>
+					</li>
+
+					<li class="person" onClick="MarkAway(0)"><img src="images/fille1.png" alt="eleve" class="eleve-img"><span class="name">Marie</span></li>
+					<li class="person" onClick="MarkAway(1)"><img src="images/fille2.png" alt="eleve" class="eleve-img"><span class="name">Aicha</span></li>
+					<li class="person" onClick="MarkAway(2)"><img src="images/gars1.png" alt="eleve" class="eleve-img"><span class="name">Martin</span></li>
+					<li class="person" onClick="MarkAway(3)"><img src="images/gars2.png" alt="eleve" class="eleve-img"><span class="name">Driss</span></li>
+					<li class="person" onClick="MarkAway(4)"><img src="images/fille1.png" alt="eleve" class="eleve-img"><span class="name">Mounia</span></li>
+					<li class="person" onClick="MarkAway(5)"><img src="images/fille4.png" alt="eleve" class="eleve-img"><span class="name">Sophie</span></li>
+					<li class="person" onClick="MarkAway(6)"><img src="images/fille3.png" alt="eleve" class="eleve-img"><span class="name">Lydia</span></li>
+					<li class="person" onClick="MarkAway(7)"><img src="images/gars3.png" alt="eleve" class="eleve-img"><span class="name">Abdel</span></li>
+					<li class="person" onClick="MarkAway(8)"><img src="images/gars1.png" alt="eleve" class="eleve-img"><span class="name">Johan</span></li>
+					<li class="person" onClick="MarkAway(9)"><img src="images/fille4.png" alt="eleve" class="eleve-img"><span class="name">Isabel</span></li>
+					<li class="person" onClick="MarkAway(10)"><img src="images/gars2.png" alt="eleve" class="eleve-img"><span class="name">Roger</span></li>
+					<li class="person" onClick="MarkAway(11)"><img src="images/fille1.png" alt="eleve" class="eleve-img"><span class="name">Lisa</span></li>
+					<li class="person" onClick="MarkAway(12)"><img src="images/gars1.png" alt="eleve" class="eleve-img"><span class="name">Eric</span></li>
+					<li class="person" onClick="MarkAway(13)"><img src="images/fille2.png" alt="eleve" class="eleve-img"><span class="name">Cathy</span></li>
+					<li class="person" onClick="MarkAway(14)"><img src="images/gars2.png" alt="eleve" class="eleve-img"><span class="name">Luc</span></li>
+					<li class="person" onClick="MarkAway(15)"><img src="images/fille4.png" alt="eleve" class="eleve-img"><span class="name">Lise</span></li>
+					<li class="person" onClick="MarkAway(16)"><img src="images/fille1.png" alt="eleve" class="eleve-img"><span class="name">Julie</span></li>
+					<li class="person" onClick="MarkAway(17)"><img src="images/gars3.png" alt="eleve" class="eleve-img"><span class="name">Eric</span></li>
+					<li class="person" onClick="MarkAway(18)"><img src="images/gars1.png" alt="eleve" class="eleve-img"><span class="name">Fred</span></li>
+					<li class="person" onClick="MarkAway(19)"><img src="images/fille4.png" alt="eleve" class="eleve-img"><span class="name">Nina</span></li>
+					<li class="person" onClick="MarkAway(20)"><img src="images/gars3.png" alt="eleve" class="eleve-img"><span class="name">Loïc</span></li>
+					<li class="person" onClick="MarkAway(21)"><img src="images/fille1.png" alt="eleve" class="eleve-img"><span class="name">Clara</span></li>
+					<li class="person" onClick="MarkAway(22)"><img src="images/gars1.png" alt="eleve" class="eleve-img"><span class="name">Jim</span></li>
+					<li class="person" onClick="MarkAway(23)"><img src="images/gars3.png" alt="eleve" class="eleve-img"><span class="name">John</span></li>
+					<li class="person" onClick="MarkAway(24)"><img src="images/fille2.png" alt="eleve" class="eleve-img"><span class="name">Zabou</span></li>
+					<li class="person" onClick="MarkAway(25)"><img src="images/gars2.png" alt="eleve" class="eleve-img"><span class="name">Richie</span></li>
+					<li class="person" onClick="MarkAway(26)"><img src="images/gars3.png" alt="eleve" class="eleve-img"><span class="name">Zoe</span></li>
+					<li class="person" onClick="MarkAway(27)"><img src="images/fille3.png" alt="eleve" class="eleve-img"><span class="name">Sofia</span></li>
+
+					<!-- <li class="person" onClick="MarkAway(0)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(1)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(2)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(3)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(4)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(5)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(6)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(7)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(8)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li>
+					<li class="person" onClick="MarkAway(9)">
+						<img class="eleve-img" src="images/Rajohnson.Nathan.png" alt=""><span class="name">Nathan Rajohnson</span>
+					</li> -->
+				</ul>
+
+				<input type="submit" value="Envoyer" />
+
+			</form>
+		</article>
+	</section>
+
+	<script type="text/javascript">
+
+		var id = null;
+
+		var MarkAway = function(id){
+
+
+			var persons = document.getElementsByClassName("person");
+
+			if (persons[id].className == "person away"){
+
+				persons[id].className = "person late";
+			}
+
+			else if (persons[id].className == "person late"){
+
+				persons[id].className = "person";
+			}
+
+			else {
+
+				persons[id].className = "person away";
+			}
+		}
+
+		var heures = document.querySelector("#hour");
+		var heure = new Date().getHours();
+
+		heures.querySelector("option[value='" + heure + "']").selected = "selected" ;
+
+		var date = new Date();
+		var jour = document.querySelector("#day");
+		jour.textContent = "Appel du " + date.getDate() + "/" + (date.getMonth() +1) ; 
+
+	</script>
+
+	
+</body>
+</html>

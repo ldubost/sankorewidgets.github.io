@@ -1,0 +1,90 @@
+/* Menu */
+$accueil: 	darken($header, 10%);;
+$notes: 	#2ccc6f;
+$devoirs: 	darken(#2ccc6f, 5%);
+$cours: 	darken(#2ccc6f, 10%);
+$agenda: 	#e94c3d;
+$absences: 	darken(#e94c3d, 5%);
+$vie-lyceenne: darken(#e94c3d, 10%);
+
+.accueil {border-left: 4px solid $accueil;}
+.notes {border-left: 4px solid $notes;}
+.devoirs {border-left: 4px solid $devoirs;}
+.cours {border-left: 4px solid $cours;}
+.agenda {border-left: 4px solid $agenda;}
+.absences {border-left: 4px solid $absences;}
+.vie-lyceenne {border-left: 4px solid $vie-lyceenne;}
+
+
+/**************************************************************************/
+/* Buttons */
+$button-text: 	#fefefe;
+$show-aside: 	#1a736f;
+
+@mixin button
+{
+	border: none;
+	margin: 0;
+	@include border-radius(2px);
+	padding: 4px 10px;
+	color: $button-text;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+@mixin show-aside
+{
+	@include button;
+	font-size: 1.2em;
+	@include border-radius(0);
+	background: $show-aside;
+	padding: 0 25px;
+
+	&:hover, &:focus, &:active
+	{
+		background: darken($show-aside, 5%);
+	}
+}
+
+#show-aside-open
+{
+	@include show-aside;
+}
+
+#show-aside-closed
+{
+	@include show-aside;
+}
+
+a
+{
+	color: blue ;
+}
+
+/*********************************************************************/
+/* Inputs */
+$input: 	#aaaaaa;
+
+input[type="text"]
+{
+	padding: 3px;
+	border: 1px $input solid;
+	@include border-radius(3px);
+
+	&:hover, &:focus, &:active
+	{
+		border: 1px $input solid;
+	}
+}
+
+select
+{
+	padding: 3px;
+	border: 1px $input solid;
+	@include border-radius(3px);
+
+	&:hover, &:focus, &:active
+	{
+		border: 1px $input solid;
+	}
+}

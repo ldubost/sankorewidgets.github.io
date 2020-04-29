@@ -1,0 +1,16 @@
+Cette application est développée par informatique-enseignant.com et se trouve en téléchargement sur le site: http://www.informatique-enseignant.com
+
+Cette application est proposée sous license Creative Commons BY-NC-SA
+
+- Vous pouvez utiliser cette application à des fins scolaires ou personnelles.
+
+- Vous pouvez utiliser cette application à des fins publiques (Merci de spécifier l'origine de la ressource: http://www.informatique-enseignant.com).
+
+- Vous ne pouvez pas utiliser cette application à des fins commerciales.
+
+
+Cette application est fournie en l'état. En aucune manière, les auteurs ne pourraient être tenus responsables de l'usage de ce cette application.
+
+
+
+CC By NC SA : Copyright © 2012-2013 Informatique-Enseignant.com

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+           xmlns:ub="http://uniboard.mnemis.com/widgets"
+           id="http://uniboard.mnemis.com/widgets/notes" 
+        version="1.2"
+        width="800"
+        height="480"
+        ub:resizable="false">
+   		<name>Area of a Circle - Demo</name>
+		<author href="http://mondada.net/gabriele/school/"
+	            email="gabNOriSPAMele@mondada.net">Gabriele Mondada</author>
+		<description>This widget illustrates the formula of the area of a circle</description>
+		
+		<content src="index.html"/>
+</widget>

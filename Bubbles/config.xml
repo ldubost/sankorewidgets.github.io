@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        version="1.0"
+        width="320"
+        height="360" 
+		ub:resizable="false">
+  <author>Francois Bocquet à partir de xwuz.com/index.html</author>
+  <name>Bubble</name>
+  <content src="/bubble/index.html"/>
+</widget>
