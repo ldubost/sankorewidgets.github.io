@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:ub="http://uniboard.mnemis.com/Piano" 
+        id="Piano" 
+        version="1.0"
+        width="871"
+        height="235" 
+        ub:resizable="true" >   
+  <name>Piano</name>
+  <content src="index.htm"/> 
+</widget>

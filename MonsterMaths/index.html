@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=500, user-scalable=no">
+    <title>Monster Math !</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" ></link>
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/monsters.js"></script>
+  </head>
+  <body onload="Controller.init();">
+  
+     <div id="start-page" class="page">
+        <img class="logo" src="images/logo.png" alt="Monster Math!"/>
+        <h2>Compte les monstres avant qu'ils ne t'attrapent !</h2>
+        <button class="play" onclick="Controller.newGame()">Go</button>
+     </div>
+
+     
+     <div id="game-page" class="page">
+         <div id="game-canvas"></div>
+         <div id="game-controls">     
+         </div> 
+     </div>
+     
+     <div id="game-over-page" class="page">
+        <img class="logo" src="images/logo.png" alt="Monster Math!"/>
+        <h2>C'est fini !</h2>
+        <p class="score">Voici tes points : <span id="game-over-score"></span></p>
+        <button class="play" onclick="Controller.newGame()">Go</button>
+     </div>
+
+
+  </body>
+</html>

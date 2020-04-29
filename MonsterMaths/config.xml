@@ -1,0 +1,16 @@
+<widget xmlns="http://www.w3.org/ns/widgets"
+ 		id="http://labs.cetis.ac.uk/widgets/monstermath"
+ 		version="0.1"
+        width="490"
+        height="490"
+        ub:resizable="false"
+        >
+  <name>Monster Math</name>
+  <description>Compte les montres avant qu'ils ne t'attrapent !</description>
+  <content src="index.html"/>
+  <icon src="icon.png"/>
+  <author>Scott Wilson</author>
+</widget>
+
+
+
