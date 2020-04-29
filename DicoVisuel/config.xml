@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/Dictionnaire_Visuel" 
+        version="0.1"
+        width="790"
+        height="510"
+        ub:resizable="true">
+      
+  		<name>Dictionnaire Visuel</name>
+		<author href="Test Album"
+	            email="francois.bocquet@diena.org">Francois Bocquet</author>
+		<description>Dictionnaire Visuel</description>
+
+        <content src="http://infovisual.info/index_fr.html"/>
+</widget>
