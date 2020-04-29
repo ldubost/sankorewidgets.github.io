@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		xmlns:ub="http://uniboard.mnemis.com/widgets"
+        identifier="http://uniboard.mnemis.com/widgets/iMicroscope" 
+        version="0.1"
+        width="800"
+        height="600"
+        ub:resizable="true"
+        ub:roles="content">
+      
+  		<name>Microscope virtuel en ligne</name>
+		<author href="http://www.open.edu/openlearn/nature-environment/natural-history/digital-microscope"
+	            email="francois@sankore.org">Francois Bocquet</author>
+		<description>Microscope</description>
+
+        <content src="http://www2.open.ac.uk/openlearn/microscope/ms_engine.swf"/>
+</widget>

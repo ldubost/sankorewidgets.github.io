@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:ub="http://uniboard.mnemis.com/widgets/meteo" 
+        id="Meteo" 
+        version="1.0"
+        width="850"
+        height="600" 
+        ub:resizable="true" >   
+  <name>Meteo</name>
+  <content src="http://chrome.wunderground.com/"/> 
+<--source : http://chrome.wunderground.com/-->
+</widget>
